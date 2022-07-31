@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Relative Units</title>
+<style>
+html{
+   font-size: 14px;
+   line-height: normal;
+}
+form {
+   width:70%;
+   margin: 0 auto;
+   text-align: center;
+}
+* {
+   padding: 2px;
+   margin:5px;
+}
+input[type="button"] {
+   border-radius: 10px;
+}
+#textContain {
+   font-size: 20px;
+   line-height: 2;
+}
+</style>
+</head>
+<body>
+<form>
+<fieldset>
+<legend>CSS-Relative-Units</legend>
+<input type="text" id="textSelect" placeholder="Type Text Here...">
+<input type="number" id="numSelect" value="1" min="1">
+<div id="radioBut">
+<input class="radio" type="radio" name="heading" value="em" checked><label>em</label>
+<input class="radio" type="radio" name="heading" value="rem"><label>rem</label>
+<input class="radio" type="radio" name="heading" value="vw"><label>vw</label>
+<input class="radio" type="radio" name="heading" value="vh"><label>lh</label>
+<input class="radio" type="radio" name="heading" value="ex"><label>ex</label>
+</div>
+<div id="textContain">Text Preview: <span id="textPreview">Output will show up here</span></div>
+<input type="button" onclick="changeText()" value="Preview">
+</fieldset>
+</form>
+<script>
+var textSelect = document.getElementById("textSelect");
+var numSelect = document.getElementById("numSelect");
+var textPreview = document.getElementById("textPreview");
+function changeText() {
+   if(textSelect.value === '')
+      textPreview.textContent = 'Type some text first';
+   else{
+      for(var i=0; i<5; i++){
+         var radInp = document.getElementsByClassName('radio')[i];
+         if(radInp.checked === true){
+            textPreview.textContent = textSelect.value;
+            textPreview.style.fontSize = numSelect.value+radInp.value
+         }
+      }
+   }
+}
+</script>
+</body>
+</html>

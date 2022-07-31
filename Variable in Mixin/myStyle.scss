@@ -1,0 +1,16 @@
+@import "mystyle2.scss";
+
+@mixin text-length($length)
+{
+    font-size: ($length)
+}
+
+$length1:20px;
+$length2:40px;
+
+body
+{
+    @include text-length($length2)
+}
+      
+  

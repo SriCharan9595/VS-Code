@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACQA,AAAA,IAAI,CACJ;EAPI,KAAK,EAID,OAAkB;CAKzB;;ADDD,AAAA,IAAI,CACJ;EAPI,SAAS,EAIJ,IAAI;CAKZ",
+    "sources": [
+        "myStyle.scss",
+        "mystyle2.scss"
+    ],
+    "names": [],
+    "file": "myStyle.css"
+}
